@@ -1,0 +1,34 @@
+@import "reset";
+@import "fonts";
+@import "colors";
+@import "mixins";
+
+/*===========================
+ Primary
+============================*/
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  font-size: 100%;
+  overflow: hidden;
+}
+
+body {
+  font-family: "OpenSans", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: $black;
+  background-color: $white;
+}
+
+a {
+  text-decoration: none;
+  @include animation(250ms, 0ms);
+}

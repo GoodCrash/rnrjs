@@ -1,0 +1,7 @@
+defmodule RnrjsWeb.PageController do
+  use RnrjsWeb, :controller
+
+  def index(conn, _params) do
+    render(conn, "index.html")
+  end
+end

@@ -8,7 +8,28 @@
     <link rel="stylesheet" href="<%= Routes.static_path(@conn, "/css/app.css") %>"/>
   </head>
   <body>
-    <header></header>
+    <header>
+      <div class="sign-btns">
+        <%= if @current_user do %>
+          <div class="current-user">
+            <%= @current_user.name %>
+          </div>
+
+          <div class="btn logout">
+            <%= link "Log out", to: Routes.session_path(@conn, :delete, @current_user), method: "delete" %>
+          </div>
+        <% else %>
+          <div class="btn signin">
+            <%= link "Sign In", to: Routes.session_path(@conn, :new) %>
+          </div>
+
+          <div class="btn signup">
+            <%= link "Sign Up", to: Routes.user_path(@conn, :new) %>
+          </div>
+        <% end %>
+      </div>
+    </header>
+
     <main role="main" class="container">
       <p class="alert alert-info" role="alert"><%= get_flash(@conn, :info) %></p>
       <p class="alert alert-danger" role="alert"><%= get_flash(@conn, :error) %></p>

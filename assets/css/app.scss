@@ -2,6 +2,7 @@
 @import "fonts";
 @import "colors";
 @import "mixins";
+@import "header";
 
 /*===========================
  Primary
@@ -31,4 +32,8 @@ body {
 a {
   text-decoration: none;
   @include animation(250ms, 0ms);
+}
+
+main {
+  padding-top: 75px;
 }

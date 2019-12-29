@@ -1,0 +1,5 @@
+<h1>User</h1>
+
+<p><b><%= @user.id %></b><p>
+<p><%= @user.name %><p>
+<p><%= @user.email %><p>

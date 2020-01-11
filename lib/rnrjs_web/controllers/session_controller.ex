@@ -6,7 +6,7 @@ defmodule RnrjsWeb.SessionController do
   end
 
   def create(conn, %{"session" => %{"email" => email, "password" => password}}) do
-    case Rnrjs.Accounts.authenticate_by_username_and_pass(email, password) do
+    case Rnrjs.Accounts.authenticate_by_email_and_pass(email, password) do
       {:ok, user} -> 
         conn
         |> RnrjsWeb.Auth.login(user)

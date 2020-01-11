@@ -38,7 +38,7 @@ defmodule Rnrjs.Accounts do
     |> Repo.insert()
   end
 
-  def authenticate_by_username_and_pass(email, given_pass) do
+  def authenticate_by_email_and_pass(email, given_pass) do
     user = get_user_by(email: email)
 
     cond do
